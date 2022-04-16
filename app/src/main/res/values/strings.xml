@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Home FItness</string>
+    <string name="start_btn">START</string>
+    <string name="slogan">Workout and get fit at home</string>
+    <string name="home_img">home image</string>
+    <string name="homefit_exercise">HOMEFIT EXERCISE</string>
+    <string name="exercise2">All challenge</string>
+    <string name="abs_btn">Exercise</string>
+    <string name="butt_btn">Exercise</string>
+    <string name="arm_btn">Exercise</string>
+    <string name="leg_btn">Exercise</string>
 </resources>

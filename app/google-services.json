@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "27852434936",
+    "project_id": "homefitness-686b8",
+    "storage_bucket": "homefitness-686b8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:27852434936:android:3aed68571af23ab421ba0d",
+        "android_client_info": {
+          "package_name": "com.example.homefitness"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "27852434936-hpin8io09kf04u9sjd6ekska1es2cjlk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdl-CKXHWMg5-eg_uz_ME54dJ5MI5IqLo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "27852434936-hpin8io09kf04u9sjd6ekska1es2cjlk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

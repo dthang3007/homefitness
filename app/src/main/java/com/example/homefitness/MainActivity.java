@@ -14,14 +14,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        login=(Button) findViewById(R.id.button);
+        login=(Button) findViewById(R.id.start_btn);
         login.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.button:
+            case R.id.start_btn:
                 startActivity(new Intent(this,LoginActivity.class) );
                 break;
         }

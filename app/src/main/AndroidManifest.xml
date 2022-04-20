@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HomeFItness">
         <activity
+            android:name=".Exercise"
+            android:exported="false"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.homefitness.MainActivity" />
+        </activity>
+
+        <activity
             android:name=".LoginActivity"
             android:exported="false" />
         <activity

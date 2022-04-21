@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:id="@+id/userName_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".2">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Text Name"
+            android:gravity="center"
+            android:textSize="24sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/option_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/userName_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".65"
+        android:background="@color/common_google_signin_btn_text_light_pressed">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/information"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="5dp"
+            android:text="Information"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/history"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="5dp"
+            android:text="History"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/data"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="5dp"
+            android:text="Data"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/settings"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="5dp"
+            android:text="Settings"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintHeight_percent=".13"
+        app:layout_constraintTop_toBottomOf="@id/option_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/exercise_btn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/ic_exercise_foreground"
+            android:contentDescription="Exercises"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/meal_btn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/ic_meal_foreground"
+            android:contentDescription="Meal"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/profile_btn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/ic_profile_foreground"
+            android:contentDescription="Profile"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

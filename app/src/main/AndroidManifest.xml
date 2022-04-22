@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HomeFItness">
         <activity
+            android:name=".Reports"
+            android:exported="false" />
+        <activity
             android:name=".Exercise"
             android:exported="false"
             android:parentActivityName=".MainActivity">
@@ -17,7 +20,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.homefitness.MainActivity" />
         </activity>
-
         <activity
             android:name=".LoginActivity"
             android:exported="false" />

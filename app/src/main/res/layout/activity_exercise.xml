@@ -14,7 +14,7 @@
         android:text="@string/homefit_exercise"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintBottom_toTopOf="@+id/report"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.07"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,7 +28,7 @@
         android:layout_marginTop="16dp"
         android:text="@string/exercise2"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintBottom_toTopOf="@+id/report"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.049"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,7 +36,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ScrollView
-        android:id="@+id/scrollView2"
+        android:id="@+id/report"
         android:layout_width="377dp"
         android:layout_height="529dp"
         android:layout_marginTop="1dp"

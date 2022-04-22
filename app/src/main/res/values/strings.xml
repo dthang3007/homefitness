@@ -9,4 +9,11 @@
     <string name="butt_btn">Exercise</string>
     <string name="arm_btn">Exercise</string>
     <string name="leg_btn">Exercise</string>
+    <string name="reports">REPORTS</string>
+    <string name="completed">Completed</string>
+    <string name="_zero">0</string>
+    <string name="kcal">Kcal</string>
+    <string name="duration">Duration</string>
+    <string name="weight">Weight</string>
+    <string name="add">Add</string>
 </resources>

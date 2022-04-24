@@ -1,8 +1,5 @@
 package com.example.homefitness;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
@@ -12,13 +9,18 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
-import java.util.regex.Pattern;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
     private FirebaseAuth mAuth;
@@ -84,26 +86,56 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
                     User user = new User(fullName, email);
+                    HashMap<String, List<Day>> exercisePack = new HashMap<String, List<Day>>();
+                    exercisePack.put("arm_pack", getListDay());
+                    exercisePack.put("leg_pack", getListDay());
+
                     FirebaseDatabase.getInstance().getReference("User").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()) {
-                                Toast.makeText(RegisterActivity.this, "User has been registered successfully!", Toast.LENGTH_LONG).show();
-                                 startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
-                                progressBar.setVisibility(View.INVISIBLE);
+//                                Toast.makeText(RegisterActivity.this, "User has been registered successfully!", Toast.LENGTH_LONG).show();
+//                                 startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
+
                             } else {
-                                Toast.makeText(RegisterActivity.this, task.getResult().toString(), Toast.LENGTH_LONG).show();
-                                progressBar.setVisibility(View.INVISIBLE);
+                                Toast.makeText(RegisterActivity.this, task.getException().toString(), Toast.LENGTH_LONG).show();
+//
                             }
                         }
                     });
+                    FirebaseDatabase.getInstance().getReference("Days").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(exercisePack).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if (task.isSuccessful()) {
+                                Toast.makeText(RegisterActivity.this, "User has been registered successfully!", Toast.LENGTH_LONG).show();
+                                startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+
+                            } else {
+                                Toast.makeText(RegisterActivity.this, task.getException().toString(), Toast.LENGTH_LONG).show();
+//
+                            }
+                        }
+                    });
+
                 } else {
-                    Toast.makeText(RegisterActivity.this, "ERROR", Toast.LENGTH_LONG);
-                    progressBar.setVisibility(View.INVISIBLE);
+                    Toast.makeText(RegisterActivity.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
+
                 }
+                progressBar.setVisibility(View.INVISIBLE);
             }
 
             ;
         });
     }
+
+    private List<Day> getListDay() {
+        List<Day> list = new ArrayList<>();
+        for (int i = 0; i < 30; i++) {
+            String day = String.valueOf(i + 1);
+            list.add(new Day(day,false));
+        }
+
+        return list;
+    }
+
 }

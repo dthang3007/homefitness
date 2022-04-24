@@ -70,13 +70,15 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             return;
         }
     progressBar.setVisibility(View.VISIBLE) ;
+
         mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-
+                    startActivity(new Intent(LoginActivity.this,Exercise.class));
                 }else{
-                    Toast.makeText(LoginActivity.this,"Failed",Toast.LENGTH_LONG);
+                    Toast.makeText(LoginActivity.this,"Email or password invalid",Toast.LENGTH_LONG).show();
+
                 }
                 progressBar.setVisibility(View.INVISIBLE);
             }

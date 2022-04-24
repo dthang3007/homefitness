@@ -11,7 +11,9 @@
         android:theme="@style/Theme.HomeFItness">
         <activity
             android:name=".Reports"
-            android:exported="false" />
+            android:exported="false">
+
+        </activity>
         <activity
             android:name=".Exercise"
             android:exported="false"

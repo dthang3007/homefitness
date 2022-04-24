@@ -10,17 +10,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HomeFItness">
         <activity
+            android:name=".StartExerciseActivity"
+            android:exported="false">
+
+        </activity>
+        <activity
+            android:name=".Exercise_Set"
+            android:exported="false"></activity>
+        <activity
             android:name=".Reports"
             android:exported="false">
 
         </activity>
         <activity
             android:name=".Exercise"
-            android:exported="false"
+            android:exported="true"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.homefitness.MainActivity" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
         </activity>
         <activity
             android:name=".LoginActivity"
@@ -30,13 +44,11 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:exported="false"></activity>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

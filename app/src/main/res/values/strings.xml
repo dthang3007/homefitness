@@ -19,5 +19,6 @@
     <string name="chest_btn">Chest Exercises</string>
     <string name="leg_btn">Leg Exercises</string>
     <string name="arm_btn">Arm Exercises</string>
+    <string name="full_body_workout">Full Body Workout</string>
 
 </resources>

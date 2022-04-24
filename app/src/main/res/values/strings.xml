@@ -19,5 +19,8 @@
     <string name="chest_btn">Chest Exercises</string>
     <string name="leg_btn">Leg Exercises</string>
     <string name="arm_btn">Arm Exercises</string>
+    <string name="meal">MEAL</string>
+    <string name="day_30">Day 30</string>
+    <string name="day_1">Day 1</string>
 
 </resources>

@@ -23,6 +23,39 @@
         <activity
             android:name=".LoginActivity"
             android:exported="false" />
+
+        <activity
+            android:name=".Meal"
+            android:exported="false"/>
+
+        <activity
+            android:name=".Day1"
+            android:exported="false"
+            android:parentActivityName=".Meal">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.homefitness.Meal" />
+        </activity>
+
+        <activity
+            android:name=".Standard"
+            android:exported="false"
+            android:parentActivityName=".Day1">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.homefitness.Day1" />
+        </activity>
+
+        <activity
+            android:name=".Vegetarian"
+            android:exported="false"
+            android:parentActivityName=".Day1">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.homefitness.Day1" />
+        </activity>
+
+
         <activity
             android:name=".RegisterActivity"
             android:exported="false" />

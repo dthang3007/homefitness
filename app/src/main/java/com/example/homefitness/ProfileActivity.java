@@ -2,6 +2,8 @@ package com.example.homefitness;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,7 +16,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class ProfileActivity extends AppCompatActivity {
+public class ProfileActivity extends AppCompatActivity implements View.OnClickListener{
 
     private TextView nameText, emailText, daysText;
 
@@ -23,6 +25,13 @@ public class ProfileActivity extends AppCompatActivity {
     private FirebaseDatabase database;
 
     private DatabaseReference databaseReference;
+
+    private Button reportButton;
+    private Button logoutButton;
+
+    private Button profileButton;
+    private Button mealButton;
+    private Button exerciseButton;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -34,6 +43,19 @@ public class ProfileActivity extends AppCompatActivity {
         nameText = findViewById(R.id.userName);
         emailText = findViewById((R.id.userEmail));
         daysText = findViewById(R.id.userDays);
+
+        profileButton=findViewById(R.id.profile_btn);
+        mealButton=findViewById(R.id.meal_btn);
+        exerciseButton=findViewById(R.id.exercise_btn);
+        profileButton.setOnClickListener(this);
+        mealButton.setOnClickListener(this);
+        exerciseButton.setOnClickListener(this);
+
+        reportButton=findViewById(R.id.report_btn);
+        logoutButton=findViewById(R.id.logout_btn);
+        reportButton.setOnClickListener(this);
+        logoutButton.setOnClickListener(this);
+
 
         database = FirebaseDatabase.getInstance();
         databaseReference = database.getReference("User");
@@ -53,6 +75,32 @@ public class ProfileActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.profile_btn:
+                Intent profileIntent = new Intent(ProfileActivity.this, ProfileActivity.class);
+                startActivity(profileIntent);
+                break;
+            case R.id.meal_btn:
+                Intent mealIntent = new Intent(ProfileActivity.this, Meal.class);
+                startActivity(mealIntent);
+                break;
+            case R.id.exercise_btn:
+                Intent exerciseIntent = new Intent(ProfileActivity.this, Exercise.class);
+                startActivity(exerciseIntent);
+                break;
+            case R.id.report_btn:
+                Intent reportIntent = new Intent(ProfileActivity.this, Reports.class);
+                startActivity(reportIntent);
+                break;
+            case R.id.logout_btn:
+                Intent logoutIntent = new Intent(ProfileActivity.this, LoginActivity.class);
+                startActivity(logoutIntent);
+                break;
+        }
     }
 }
 

@@ -18,6 +18,8 @@ public class Exercise extends AppCompatActivity implements View.OnClickListener 
     private Button chestButton;
 
     private Button profileButton;
+    private Button mealButton;
+    private Button exerciseButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,14 +29,21 @@ public class Exercise extends AppCompatActivity implements View.OnClickListener 
         absButton=findViewById(R.id.abs_btn);
         buttButton=findViewById(R.id.butt_btn);
         chestButton=findViewById(R.id.chest_btn);
+
         profileButton=findViewById(R.id.profile_btn);
+        mealButton=findViewById(R.id.meal_btn);
+        exerciseButton=findViewById(R.id.exercise_btn);
+
 
         armButton.setOnClickListener(this);
         legButton.setOnClickListener(this);
         absButton.setOnClickListener(this);
         buttButton.setOnClickListener(this);
         chestButton.setOnClickListener(this);
+
         profileButton.setOnClickListener(this);
+        mealButton.setOnClickListener(this);
+        exerciseButton.setOnClickListener(this);
 
     }
 
@@ -63,6 +72,14 @@ public class Exercise extends AppCompatActivity implements View.OnClickListener 
             case R.id.profile_btn:
                 Intent profileIntent = new Intent(Exercise.this, ProfileActivity.class);
                 startActivity(profileIntent);
+                break;
+            case R.id.meal_btn:
+                Intent mealIntent = new Intent(Exercise.this, Meal.class);
+                startActivity(mealIntent);
+                break;
+            case R.id.exercise_btn:
+                Intent exerciseIntent = new Intent(Exercise.this, Exercise.class);
+                startActivity(exerciseIntent);
                 break;
         }
     }

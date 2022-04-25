@@ -16,6 +16,8 @@ public class Exercise extends AppCompatActivity implements View.OnClickListener 
     private Button absButton;
     private Button buttButton;
     private Button chestButton;
+
+    private Button profileButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,11 +27,15 @@ public class Exercise extends AppCompatActivity implements View.OnClickListener 
         absButton=findViewById(R.id.abs_btn);
         buttButton=findViewById(R.id.butt_btn);
         chestButton=findViewById(R.id.chest_btn);
+        profileButton=findViewById(R.id.profile_btn);
+
         armButton.setOnClickListener(this);
         legButton.setOnClickListener(this);
         absButton.setOnClickListener(this);
         buttButton.setOnClickListener(this);
         chestButton.setOnClickListener(this);
+        profileButton.setOnClickListener(this);
+
     }
 
     @Override
@@ -53,6 +59,10 @@ public class Exercise extends AppCompatActivity implements View.OnClickListener 
             case R.id.chest_btn:
                 break;
             case R.id.butt_btn:
+                break;
+            case R.id.profile_btn:
+                Intent profileIntent = new Intent(Exercise.this, ProfileActivity.class);
+                startActivity(profileIntent);
                 break;
         }
     }

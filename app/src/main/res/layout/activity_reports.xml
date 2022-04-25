@@ -4,31 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background">
+    android:background="@drawable/profile_background">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
+        android:id="@+id/textReports"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/reports"
-        android:textColor="@color/reports_background"
-        android:textSize="34sp"
+        android:textStyle="bold"
+        android:textColor="@color/background"
+        android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="15dp"/>
 
     <ScrollView
         android:id="@+id/report"
         android:layout_width="378dp"
-        android:layout_height="600dp"
-        android:layout_marginTop="50dp"
-        android:background="@color/reports_background"
+        android:layout_height="510dp"
         android:contentDescription="@string/appbar_scrolling_view_behavior"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.41">
+        app:layout_constraintVertical_bias="0.41"
+        android:background="@drawable/blur_background">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -59,21 +62,22 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
-                        android:background="@color/blue"
                         android:contentDescription="TODO"
                         app:srcCompat="@drawable/icons8_check_mark_48"
-                        tools:ignore="ImageContrastCheck" />
+                        tools:ignore="ImageContrastCheck"
+                        android:layout_marginStart="5dp"/>
 
                     <TextView
                         android:id="@+id/number_completed_exercise"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="48dp"
                         android:layout_weight="4"
-                        android:background="@color/white"
                         android:text="@string/_zero"
                         android:textAlignment="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Large"
                         android:textColor="@color/black"
+                        android:background="@color/white"
+                        android:layout_marginStart="5dp"
                         android:textSize="48sp" />
 
                     <TextView
@@ -81,11 +85,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:background="@color/lightgreen"
                         android:text="@string/completed"
                         android:textAlignment="center"
                         android:textColor="@color/black"
-                        android:textSize="24sp" />
+                        android:textSize="24sp"
+                        android:layout_marginStart="5dp"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -98,32 +102,36 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
-                        android:background="@color/blue"
                         app:srcCompat="@drawable/icons8_fire_48"
-                        tools:ignore="ImageContrastCheck" />
+                        tools:ignore="ImageContrastCheck"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"/>
 
                     <TextView
                         android:id="@+id/number_kcal_burned"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="48dp"
                         android:layout_weight="4"
-                        android:background="@color/white"
                         android:text="@string/_zero"
                         android:textAlignment="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Large"
                         android:textColor="@color/black"
-                        android:textSize="48sp" />
+                        android:textSize="48sp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@color/white"/>
 
                     <TextView
                         android:id="@+id/kcal_burned"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:background="@color/lightgreen"
                         android:text="@string/kcal"
                         android:textAlignment="center"
                         android:textColor="@color/black"
-                        android:textSize="24sp" />
+                        android:textSize="24sp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"/>
                 </LinearLayout>
 
 
@@ -137,31 +145,32 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
-                        android:background="@color/blue"
-                        app:srcCompat="@drawable/icons8_retro_alarm_clock_48" />
+                        app:srcCompat="@drawable/icons8_retro_alarm_clock_48"
+                        android:layout_marginEnd="5dp"/>
 
                     <TextView
                         android:id="@+id/number_pratice_duration"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="48dp"
                         android:layout_weight="4"
-                        android:background="@color/white"
                         android:text="@string/_zero"
                         android:textAlignment="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Large"
                         android:textColor="@color/black"
-                        android:textSize="48sp" />
+                        android:textSize="48sp"
+                        android:background="@color/white"
+                        android:layout_marginEnd="5dp"/>
 
                     <TextView
                         android:id="@+id/pratice_duration"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:background="@color/lightgreen"
                         android:text="@string/duration"
                         android:textAlignment="center"
                         android:textColor="@color/black"
-                        android:textSize="24sp" />
+                        android:textSize="24sp"
+                        android:layout_marginEnd="5dp"/>
                 </LinearLayout>
 
 
@@ -309,10 +318,11 @@
 
             <Button
                 android:id="@+id/activity_main_calculate"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="290dp"
+                android:layout_height="60dp"
                 android:layout_gravity="center_horizontal"
-                android:text="@string/calculate" />
+                android:text="@string/calculate"
+                android:backgroundTint="#6B6B6B"/>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/activity_main_resultcard"
@@ -364,29 +374,75 @@
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:text="@string/weight"
-                    android:textColor="@color/green"
+                    android:textColor="@color/background"
                     android:textSize="24sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"/>
 
                 <Button
                     android:id="@+id/add_button"
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
                     android:layout_height="48dp"
                     android:layout_alignParentBottom="false"
                     android:text="@string/add"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginEnd="20dp"
+                    android:backgroundTint="#6B6B6B"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="174dp"
+                android:layout_height="wrap_content"
                 android:background="@color/background">
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </ScrollView>
 
+    <LinearLayout
+        android:id="@+id/nav_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintHeight_percent=".15"
+        app:layout_constraintTop_toBottomOf="@id/report"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/exercise_btn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/ic_exercise_foreground"
+            android:contentDescription="Exercises"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/meal_btn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/ic_meal_foreground"
+            android:contentDescription="Meal"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/profile_btn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/ic_profile_foreground"
+            android:contentDescription="Profile"/>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

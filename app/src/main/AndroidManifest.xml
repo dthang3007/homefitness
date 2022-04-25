@@ -19,7 +19,7 @@
             android:exported="true"></activity>
         <activity
             android:name=".Reports"
-            android:exported="false">
+            android:exported="true">
 
         </activity>
         <activity
@@ -38,7 +38,7 @@
 
         <activity
             android:name=".Meal"
-            android:exported="false"/>
+            android:exported="true"/>
 
         <activity
             android:name=".Day1"
@@ -51,7 +51,7 @@
 
         <activity
             android:name=".Standard"
-            android:exported="false"
+            android:exported="true"
             android:parentActivityName=".Day1">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -60,7 +60,7 @@
 
         <activity
             android:name=".Vegetarian"
-            android:exported="false"
+            android:exported="true"
             android:parentActivityName=".Day1">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

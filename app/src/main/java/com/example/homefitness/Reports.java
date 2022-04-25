@@ -20,13 +20,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
-public class Reports extends AppCompatActivity {
+public class Reports extends AppCompatActivity implements View.OnClickListener{
     private EditText weightKgEditText, heightCmEditText;
     private EditText weightLbsEditText, heightFtEditText, heightInEditText;
     private Button calculateButton;
     private TextView bmiTextView, categoryTextView;
     private ToggleButton toggleUnitsButton;
     private CardView bmiResultCardView;
+
+    private Button profileButton;
+    private Button mealButton;
+    private Button exerciseButton;
 
     private boolean inMetricUnits;
 
@@ -48,6 +52,13 @@ public class Reports extends AppCompatActivity {
         bmiTextView = findViewById(R.id.activity_main_bmi);
         categoryTextView = findViewById(R.id.activity_main_category);
         bmiResultCardView = findViewById(R.id.activity_main_resultcard);
+
+        profileButton=findViewById(R.id.profile_btn);
+        mealButton=findViewById(R.id.meal_btn);
+        exerciseButton=findViewById(R.id.exercise_btn);
+        profileButton.setOnClickListener(this);
+        mealButton.setOnClickListener(this);
+        exerciseButton.setOnClickListener(this);
 
         inMetricUnits = true;
         updateInputsVisibility();
@@ -124,4 +135,21 @@ public class Reports extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.profile_btn:
+                Intent profileIntent = new Intent(Reports.this, ProfileActivity.class);
+                startActivity(profileIntent);
+                break;
+            case R.id.meal_btn:
+                Intent mealIntent = new Intent(Reports.this, Meal.class);
+                startActivity(mealIntent);
+                break;
+            case R.id.exercise_btn:
+                Intent exerciseIntent = new Intent(Reports.this, Exercise.class);
+                startActivity(exerciseIntent);
+                break;
+        }
+    }
 }

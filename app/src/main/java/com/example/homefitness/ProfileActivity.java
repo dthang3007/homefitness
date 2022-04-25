@@ -10,6 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -18,31 +20,30 @@ import com.google.firebase.database.ValueEventListener;
 
 public class ProfileActivity extends AppCompatActivity implements View.OnClickListener{
 
-    private TextView nameText, emailText, daysText;
-
-    String email;
-
-    private FirebaseDatabase database;
-
-    private DatabaseReference databaseReference;
-
     private Button reportButton;
     private Button logoutButton;
+    private TextView nameText;
+    private TextView emailText;
 
     private Button profileButton;
     private Button mealButton;
     private Button exerciseButton;
+
+    String name, email;
+
+
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_profile);
-        Intent intent = getIntent();
-        email = intent.getStringExtra("email");
-        nameText = findViewById(R.id.userName);
-        emailText = findViewById((R.id.userEmail));
-        daysText = findViewById(R.id.userDays);
+//        name = getString(R.string.userName);
+//        email = getString(R.string.userEmail);
+
+
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
         profileButton=findViewById(R.id.profile_btn);
         mealButton=findViewById(R.id.meal_btn);
@@ -51,30 +52,24 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         mealButton.setOnClickListener(this);
         exerciseButton.setOnClickListener(this);
 
+        nameText = (TextView) findViewById(R.id.userName);
+        emailText = (TextView) findViewById(R.id.userEmail);
+
         reportButton=findViewById(R.id.report_btn);
         logoutButton=findViewById(R.id.logout_btn);
         reportButton.setOnClickListener(this);
         logoutButton.setOnClickListener(this);
 
+        if (user != null) {
+            name = user.getDisplayName();
+            email = user.getEmail();
+            String uid = user.getUid();
+        }
 
-        database = FirebaseDatabase.getInstance();
-        databaseReference = database.getReference("User");
-        databaseReference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for (DataSnapshot ds : snapshot.getChildren()) {
-                    if(ds.child("email").getValue().equals(email)) {
-                        nameText.setText(ds.child("fullName").getValue(String.class));
-                        emailText.setText(ds.child(email).getValue(String.class));
-                    }
-                }
-            }
+        nameText.setText(name);
+        emailText.setText(email);
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
 
-            }
-        });
     }
 
     @Override

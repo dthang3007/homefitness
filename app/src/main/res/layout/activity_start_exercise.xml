@@ -45,20 +45,9 @@
         app:layout_constraintTop_toBottomOf="@+id/timeCountDown"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginBottom="70dp"/>
+        android:layout_marginBottom="70dp"
+        android:backgroundTint="#6B6B6B"/>
 
-    <Button
-        android:id="@+id/rollBack"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:text="Back"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/startStop"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="70dp"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

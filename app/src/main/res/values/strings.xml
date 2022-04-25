@@ -17,6 +17,7 @@
     <string name="leg_btn">Leg Exercises</string>
     <string name="arm_btn">Arm Exercises</string>
 
+
     <string name="bmi_calculator">BMI Calculator</string>
     <string name="your_height_in_cm">Your Height in Cm</string>
     <string name="your_weight_in_kg">Your Weight in Kg</string>
@@ -34,6 +35,11 @@
     <string name="metric_units">Metric Units</string>
     <string name="ft">ft</string>
     <string name="in">in</string>
+
+
+    <string name="meal">MEAL</string>
+    <string name="day_30">Day 30</string>
+    <string name="day_1">Day 1</string>
 
 
     <string name="full_body_workout">Full Body Workout</string>

@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background">
+    android:background="@drawable/bg_wrapper">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:text="@string/reports"
-        android:textColor="@color/reports_background"
+        android:textColor="@color/lightgreen"
         android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

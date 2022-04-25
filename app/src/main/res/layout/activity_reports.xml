@@ -6,14 +6,17 @@
     android:layout_height="match_parent"
     android:background="@drawable/profile_background">
 
+
     <TextView
         android:id="@+id/textReports"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/reports"
+
         android:textStyle="bold"
         android:textColor="@color/background"
         android:textSize="30sp"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

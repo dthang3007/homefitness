@@ -12,4 +12,6 @@
     <color name="reports_background">#FFC107</color>
     <color name="blue">#F44336</color>
     <color name="lightgreen">#8BC34A</color>
+    <color name="pink">#fed0b8</color>
+    <color name="bluish_grey">#78e4e7</color>
 </resources>

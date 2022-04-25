@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#433030">
+    android:background="@drawable/profile_background">
 
     <ImageButton
         android:id="@+id/imageButton"
-        android:layout_width="247dp"
-        android:layout_height="230dp"
+        android:layout_width="230dp"
+        android:layout_height="200dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,13 +26,14 @@
         android:backgroundTint="#5C6E8C"
         android:text="STANDARD DIET"
         android:textAlignment="center"
-        android:textColor="#00FF03"
+        android:textColor="@color/background"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp"/>
 
     <TextView
         android:id="@+id/textView11"
@@ -43,7 +44,7 @@
         android:backgroundTint="#5C6E8C"
         android:text="VEGETARIAN DIET"
         android:textAlignment="center"
-        android:textColor="#00FF03"
+        android:textColor="@color/background"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/imageButton"
@@ -53,13 +54,13 @@
 
     <ImageButton
         android:id="@+id/imageButton3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="92dp"
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView10"
         app:srcCompat="@drawable/cashew__sweet_potato_dip"
         tools:ignore="SpeakableTextPresentCheck" />
 

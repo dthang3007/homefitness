@@ -78,17 +78,17 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_margin="8dp"
-            android:background="@color/bluish_grey"
-            android:text="Report"
-            android:textColor="@color/pink"/>
+            android:background="@drawable/blur_background"
+            android:text="Reports"
+            android:textColor="@color/background"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/settings"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_margin="8dp"
-            android:background="@color/bluish_grey"
-            android:textColor="@color/pink"
+            android:background="@drawable/blur_background"
+            android:textColor="@color/background"
             android:text="Settings"
             android:layout_marginBottom="0dp"/>
     </LinearLayout>

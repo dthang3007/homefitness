@@ -4,25 +4,68 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background">
+    android:background="@drawable/profile_background">
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
         android:text="@string/meal"
-        android:textColor="@color/white"
-        android:textSize="34sp"
+        android:textColor="@color/background"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/nav_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintHeight_percent=".15"
+        app:layout_constraintTop_toBottomOf="@id/report"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/exercise_btn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/ic_exercise_foreground"
+            android:contentDescription="Exercises"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/meal_btn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/ic_meal_foreground"
+            android:contentDescription="Meal"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/profile_btn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/ic_profile_foreground"
+            android:contentDescription="Profile"/>
+    </LinearLayout>
+
 
     <ScrollView
         android:id="@+id/report"
-        android:layout_width="378dp"
-        android:layout_height="600dp"
-        android:background="#514B4B"
+        android:layout_width="wrap_content"
+        android:layout_height="500dp"
         android:contentDescription="@string/appbar_scrolling_view_behavior"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,7 +87,7 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="976dp"
+                android:layout_height="wrap_content"
                 tools:layout_editor_absoluteX="-4dp"
                 tools:layout_editor_absoluteY="17dp">
 
@@ -57,7 +100,8 @@
                     android:text="@string/day_30"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    tools:ignore="TouchTargetSizeCheck"
+                    android:backgroundTint="#6B6B6B"/>
 
                 <Button
                     android:id="@+id/button35"
@@ -68,7 +112,8 @@
                     android:text="Day 29"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    tools:ignore="TouchTargetSizeCheck"
+                    android:backgroundTint="#6B6B6B"/>
 
                 <Button
                     android:id="@+id/button34"
@@ -79,7 +124,8 @@
                     android:text="Day 28"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    tools:ignore="TouchTargetSizeCheck"
+                    android:backgroundTint="#6B6B6B"/>
 
                 <Button
                     android:id="@+id/button33"
@@ -90,7 +136,8 @@
                     android:text="Day 27"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    tools:ignore="TouchTargetSizeCheck"
+                    android:backgroundTint="#6B6B6B"/>
 
                 <Button
                     android:id="@+id/button31"
@@ -101,7 +148,8 @@
                     android:text="Day 25"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    tools:ignore="TouchTargetSizeCheck"
+                    android:backgroundTint="#6B6B6B"/>
 
                 <Button
                     android:id="@+id/button32"
@@ -112,7 +160,8 @@
                     android:text="Day 26"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    tools:ignore="TouchTargetSizeCheck"
+                    android:backgroundTint="#6B6B6B"/>
 
                 <Button
                     android:id="@+id/button30"
@@ -123,7 +172,8 @@
                     android:text="Day 24"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    tools:ignore="TouchTargetSizeCheck"
+                    android:backgroundTint="#6B6B6B"/>
 
                 <Button
                     android:id="@+id/button28"
@@ -134,7 +184,8 @@
                     android:text="Day 22"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    tools:ignore="TouchTargetSizeCheck"
+                    android:backgroundTint="#6B6B6B"/>
 
                 <Button
                     android:id="@+id/button29"
@@ -145,7 +196,8 @@
                     android:text="Day 23"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    tools:ignore="TouchTargetSizeCheck"
+                    android:backgroundTint="#6B6B6B"/>
 
                 <Button
                     android:id="@+id/button27"
@@ -156,7 +208,8 @@
                     android:text="Day 21"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    tools:ignore="TouchTargetSizeCheck"
+                    android:backgroundTint="#6B6B6B"/>
 
                 <Button
                     android:id="@+id/button26"
@@ -167,7 +220,8 @@
                     android:text="Day 20"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    tools:ignore="TouchTargetSizeCheck"
+                    android:backgroundTint="#6B6B6B"/>
 
                 <Button
                     android:id="@+id/button25"
@@ -178,7 +232,8 @@
                     android:text="Day 19"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    tools:ignore="TouchTargetSizeCheck"
+                    android:backgroundTint="#6B6B6B"/>
 
                 <Button
                     android:id="@+id/button24"
@@ -189,7 +244,8 @@
                     android:text="Day 18"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    tools:ignore="TouchTargetSizeCheck"
+                    android:backgroundTint="#6B6B6B"/>
 
                 <Button
                     android:id="@+id/button23"
@@ -200,7 +256,8 @@
                     android:text="Day 17"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    tools:ignore="TouchTargetSizeCheck"
+                    android:backgroundTint="#6B6B6B"/>
 
                 <Button
                     android:id="@+id/button22"
@@ -210,7 +267,8 @@
                     android:text="Day 16"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    tools:ignore="TouchTargetSizeCheck"
+                    android:backgroundTint="#6B6B6B"/>
 
                 <Button
                     android:id="@+id/button16"
@@ -221,7 +279,8 @@
                     android:text="Day 15"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    tools:ignore="TouchTargetSizeCheck"
+                    android:backgroundTint="#6B6B6B"/>
 
                 <Button
                     android:id="@+id/button18"
@@ -232,7 +291,8 @@
                     android:text="Day 14"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    tools:ignore="TouchTargetSizeCheck"
+                    android:backgroundTint="#6B6B6B"/>
 
                 <Button
                     android:id="@+id/button17"
@@ -242,7 +302,8 @@
                     android:text="Day 13"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    tools:ignore="TouchTargetSizeCheck"
+                    android:backgroundTint="#6B6B6B"/>
 
                 <Button
                     android:id="@+id/button2"
@@ -255,7 +316,8 @@
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    tools:ignore="TouchTargetSizeCheck"
+                    android:backgroundTint="#6B6B6B"/>
 
                 <Button
                     android:id="@+id/button5"
@@ -266,7 +328,8 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.501"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:backgroundTint="#6B6B6B"/>
 
                 <Button
                     android:id="@+id/button7"
@@ -276,7 +339,8 @@
                     android:text="Day 4"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    tools:ignore="TouchTargetSizeCheck"
+                    android:backgroundTint="#6B6B6B"/>
 
                 <Button
                     android:id="@+id/button8"
@@ -287,7 +351,8 @@
                     android:text="Day 5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    tools:ignore="TouchTargetSizeCheck"
+                    android:backgroundTint="#6B6B6B"/>
 
                 <Button
                     android:id="@+id/button9"
@@ -298,7 +363,8 @@
                     android:text="Day 6"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    tools:ignore="TouchTargetSizeCheck"
+                    android:backgroundTint="#6B6B6B"/>
 
                 <Button
                     android:id="@+id/button12"
@@ -309,7 +375,8 @@
                     android:text="Day 9"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    tools:ignore="TouchTargetSizeCheck"
+                    android:backgroundTint="#6B6B6B"/>
 
                 <Button
                     android:id="@+id/button10"
@@ -319,7 +386,8 @@
                     android:text="Day 7"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    tools:ignore="TouchTargetSizeCheck"
+                    android:backgroundTint="#6B6B6B"/>
 
                 <Button
                     android:id="@+id/button11"
@@ -330,7 +398,8 @@
                     android:text="Day 8"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    tools:ignore="TouchTargetSizeCheck"
+                    android:backgroundTint="#6B6B6B"/>
 
                 <Button
                     android:id="@+id/button13"
@@ -341,7 +410,8 @@
                     android:text="Day 12"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    tools:ignore="TouchTargetSizeCheck"
+                    android:backgroundTint="#6B6B6B"/>
 
                 <Button
                     android:id="@+id/button15"
@@ -352,7 +422,8 @@
                     android:text="Day 11"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    tools:ignore="TouchTargetSizeCheck"
+                    android:backgroundTint="#6B6B6B"/>
 
                 <Button
                     android:id="@+id/button14"
@@ -362,7 +433,8 @@
                     android:text="Day 10"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    tools:ignore="TouchTargetSizeCheck"
+                    android:backgroundTint="#6B6B6B"/>
 
                 <Button
                     android:id="@+id/button6"
@@ -374,7 +446,8 @@
                     app:layout_constraintHorizontal_bias="0.964"
                     app:layout_constraintStart_toEndOf="@+id/button5"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    tools:ignore="TouchTargetSizeCheck"
+                    android:backgroundTint="#6B6B6B"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

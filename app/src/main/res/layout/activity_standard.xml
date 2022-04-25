@@ -4,14 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3E3C3C">
+    android:background="@drawable/meal_bg_std">
 
     <ScrollView
         android:id="@+id/report"
         android:layout_width="378dp"
-        android:layout_height="600dp"
-        android:layout_marginTop="80dp"
-        android:background="#514B4B"
+        android:layout_height="500dp"
+        android:layout_marginTop="10dp"
         android:contentDescription="@string/appbar_scrolling_view_behavior"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,8 +21,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#802A98"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:background="@drawable/blur_background">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -34,7 +33,7 @@
                     android:layout_width="153dp"
                     android:layout_height="44dp"
                     android:text=" Breakfast"
-                    android:textColor="#FFFDFD"
+                    android:textColor="@color/background"
                     android:textSize="30sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
@@ -56,7 +55,7 @@
                     android:layout_marginTop="76dp"
                     android:text="Blood Sugar Balancing Smoothie"
                     android:textAlignment="center"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/background"
                     android:textSize="20sp"
                     android:textStyle="italic"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -71,7 +70,7 @@
                     android:layout_marginTop="204dp"
                     android:text="Chili Turmetic Hummus"
                     android:textAlignment="center"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/background"
                     android:textSize="20sp"
                     android:textStyle="italic"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -86,7 +85,7 @@
                     android:layout_marginTop="184dp"
                     android:text="Red Pepper Boats"
                     android:textAlignment="center"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/background"
                     android:textSize="20sp"
                     android:textStyle="italic"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -101,7 +100,7 @@
                     android:layout_marginTop="60dp"
                     android:text=" Lunch"
                     android:textAlignment="textStart"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/background"
                     android:textSize="30sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
@@ -114,7 +113,7 @@
                     android:layout_marginTop="320dp"
                     android:text=" Dinner"
                     android:textAlignment="textStart"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/background"
                     android:textSize="30sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
@@ -136,7 +135,7 @@
                     android:layout_marginTop="17dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView8"
-                    app:srcCompat="@drawable/red_pepper_boats" />
+                    app:srcCompat="@drawable/red_pepper_boats"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </ScrollView>

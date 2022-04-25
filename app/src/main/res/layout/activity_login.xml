@@ -66,7 +66,8 @@
         android:text="LOGIN"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        android:backgroundTint="#6B6B6B"/>
 
     <TextView
         android:id="@+id/textView2"

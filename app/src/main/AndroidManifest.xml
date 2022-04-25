@@ -10,29 +10,78 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HomeFItness">
         <activity
+            android:name=".StartExerciseActivity"
+            android:exported="false">
+
+        </activity>
+        <activity
+            android:name=".Exercise_Set"
+            android:exported="false"></activity>
+        <activity
+            android:name=".Reports"
+            android:exported="false">
+
+        </activity>
+        <activity
             android:name=".Exercise"
-            android:exported="false"
+            android:exported="true"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.homefitness.MainActivity" />
-        </activity>
-
-        <activity
-            android:name=".LoginActivity"
-            android:exported="false" />
-        <activity
-            android:name=".RegisterActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".Meal"
+            android:exported="false"/>
+
+        <activity
+            android:name=".Day1"
+            android:exported="false"
+            android:parentActivityName=".Meal">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.homefitness.Meal" />
+        </activity>
+
+        <activity
+            android:name=".Standard"
+            android:exported="false"
+            android:parentActivityName=".Day1">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.homefitness.Day1" />
+        </activity>
+
+        <activity
+            android:name=".Vegetarian"
+            android:exported="false"
+            android:parentActivityName=".Day1">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.homefitness.Day1" />
+        </activity>
+
+
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"></activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

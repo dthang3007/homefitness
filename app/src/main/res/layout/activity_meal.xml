@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/meal"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/report"
+        android:layout_width="378dp"
+        android:layout_height="600dp"
+        android:background="#514B4B"
+        android:contentDescription="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.41">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="204dp"
+                app:srcCompat="@drawable/ti_xung" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="976dp"
+                tools:layout_editor_absoluteX="-4dp"
+                tools:layout_editor_absoluteY="17dp">
+
+                <Button
+                    android:id="@+id/button36"
+                    android:layout_width="109dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="268dp"
+                    android:layout_marginTop="764dp"
+                    android:text="@string/day_30"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/button35"
+                    android:layout_width="109dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="132dp"
+                    android:layout_marginTop="764dp"
+                    android:text="Day 29"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/button34"
+                    android:layout_width="109dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="764dp"
+                    android:text="Day 28"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/button33"
+                    android:layout_width="109dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="268dp"
+                    android:layout_marginTop="676dp"
+                    android:text="Day 27"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/button31"
+                    android:layout_width="109dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="676dp"
+                    android:text="Day 25"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/button32"
+                    android:layout_width="109dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="132dp"
+                    android:layout_marginTop="676dp"
+                    android:text="Day 26"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/button30"
+                    android:layout_width="109dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="268dp"
+                    android:layout_marginTop="584dp"
+                    android:text="Day 24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/button28"
+                    android:layout_width="109dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="584dp"
+                    android:text="Day 22"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/button29"
+                    android:layout_width="109dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="132dp"
+                    android:layout_marginTop="584dp"
+                    android:text="Day 23"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/button27"
+                    android:layout_width="109dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="268dp"
+                    android:layout_marginTop="492dp"
+                    android:text="Day 21"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/button26"
+                    android:layout_width="109dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="132dp"
+                    android:layout_marginTop="492dp"
+                    android:text="Day 20"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/button25"
+                    android:layout_width="109dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="492dp"
+                    android:text="Day 19"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/button24"
+                    android:layout_width="109dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="268dp"
+                    android:layout_marginTop="408dp"
+                    android:text="Day 18"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/button23"
+                    android:layout_width="109dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="132dp"
+                    android:layout_marginTop="408dp"
+                    android:text="Day 17"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/button22"
+                    android:layout_width="109dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="408dp"
+                    android:text="Day 16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/button16"
+                    android:layout_width="109dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="268dp"
+                    android:layout_marginTop="328dp"
+                    android:text="Day 15"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/button18"
+                    android:layout_width="109dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="132dp"
+                    android:layout_marginTop="328dp"
+                    android:text="Day 14"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/button17"
+                    android:layout_width="109dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="328dp"
+                    android:text="Day 13"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="109dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="28dp"
+                    android:text="@string/day_1"
+                    android:textAlignment="center"
+                    app:layout_constraintEnd_toStartOf="@+id/button5"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="109dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="28dp"
+                    android:text="Day 2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.501"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/button7"
+                    android:layout_width="109dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="104dp"
+                    android:text="Day 4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/button8"
+                    android:layout_width="109dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="132dp"
+                    android:layout_marginTop="104dp"
+                    android:text="Day 5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/button9"
+                    android:layout_width="109dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="268dp"
+                    android:layout_marginTop="104dp"
+                    android:text="Day 6"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/button12"
+                    android:layout_width="109dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="268dp"
+                    android:layout_marginTop="172dp"
+                    android:text="Day 9"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/button10"
+                    android:layout_width="109dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="172dp"
+                    android:text="Day 7"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/button11"
+                    android:layout_width="109dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="132dp"
+                    android:layout_marginTop="172dp"
+                    android:text="Day 8"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/button13"
+                    android:layout_width="109dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="268dp"
+                    android:layout_marginTop="252dp"
+                    android:text="Day 12"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/button15"
+                    android:layout_width="109dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="132dp"
+                    android:layout_marginTop="252dp"
+                    android:text="Day 11"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/button14"
+                    android:layout_width="109dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="252dp"
+                    android:text="Day 10"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/button6"
+                    android:layout_width="109dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="28dp"
+                    android:text="Day 3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.964"
+                    app:layout_constraintStart_toEndOf="@+id/button5"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -74,7 +74,7 @@
             android:layout_marginBottom="60dp"/>
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/report"
+            android:id="@+id/report_btn"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_margin="8dp"
@@ -83,13 +83,13 @@
             android:textColor="@color/background"/>
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/settings"
+            android:id="@+id/logout_btn"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_margin="8dp"
             android:background="@drawable/blur_background"
             android:textColor="@color/background"
-            android:text="Settings"
+            android:text="Log Out"
             android:layout_marginBottom="0dp"/>
     </LinearLayout>
 

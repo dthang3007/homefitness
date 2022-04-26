@@ -1,8 +1,11 @@
 package com.example.homefitness;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
@@ -23,13 +26,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Exercise_Set extends AppCompatActivity {
+public class Exercise_Set extends AppCompatActivity implements View.OnClickListener {
     private RecyclerView rcvDay;
     private FirebaseAuth mAuth;
     private DatabaseReference reference;
     private FirebaseUser user;
     private String userId;
-
+    private Button buttonBack;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +41,8 @@ public class Exercise_Set extends AppCompatActivity {
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 6);
         rcvDay.setLayoutManager(gridLayoutManager);
         mAuth = FirebaseAuth.getInstance();
-
+        buttonBack=findViewById(R.id.button3);
+        buttonBack.setOnClickListener(this);
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             String value = extras.getString("arm_pack");
@@ -67,8 +71,6 @@ public class Exercise_Set extends AppCompatActivity {
                 //                List<Day> days = (List<Day>) td.get("arm_pack");
                 Log.d("test", td.get("arm_pack").toString());
 
-//                List<Day> days = (List<Day>) td.get("arm_pack");
-//
                 if (days.size() > 0) {
                     DayAdapter adapter = new DayAdapter(days);
                     rcvDay.setAdapter((adapter));
@@ -85,4 +87,13 @@ public class Exercise_Set extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.button3:
+                Intent i = new Intent(Exercise_Set.this,Exercise.class);
+                startActivity(i);
+                break;
+        }
+    }
 }

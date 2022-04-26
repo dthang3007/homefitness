@@ -1,5 +1,6 @@
 package com.example.homefitness;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.util.Log;
@@ -21,6 +22,7 @@ public class StartExerciseActivity extends AppCompatActivity implements View.OnC
     private long mTimeLeftInMillis = START_TIME_IN_MILLIS;
     private boolean mTimerRunning;
     private Pack pack;
+    private Button buttonBack;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,11 +38,21 @@ public class StartExerciseActivity extends AppCompatActivity implements View.OnC
         mTextViewCountDown = findViewById(R.id.timeCountDown);
         mButtonStartPause.setOnClickListener(this);
 
+        buttonBack=findViewById(R.id.button3);
+        buttonBack.setOnClickListener(this);
+
     }
 
     @Override
     public void onClick(View view) {
         startTimer();
+
+        switch (view.getId()){
+            case R.id.button3:
+                Intent i = new Intent(StartExerciseActivity.this,Exercise_Set.class);
+                startActivity(i);
+                break;
+        }
     }
     private void startTimer() {
         mCountDownTimer = new CountDownTimer(mTimeLeftInMillis, 1000) {

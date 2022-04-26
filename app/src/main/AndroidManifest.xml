@@ -11,20 +11,22 @@
         android:theme="@style/Theme.HomeFItness">
         <activity
             android:name=".StartExerciseActivity"
-            android:exported="true">
+            android:exported="false">
 
         </activity>
         <activity
             android:name=".Exercise_Set"
-            android:exported="true"></activity>
+            android:exported="false">
+
+        </activity>
         <activity
             android:name=".Reports"
-            android:exported="true">
+            android:exported="false">
 
         </activity>
         <activity
             android:name=".Exercise"
-            android:exported="true"
+            android:exported="false"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -34,15 +36,15 @@
         </activity>
         <activity
             android:name=".LoginActivity"
-            android:exported="true" />
+            android:exported="false" />
 
         <activity
             android:name=".Meal"
-            android:exported="true"/>
+            android:exported="false"/>
 
         <activity
             android:name=".Day1"
-            android:exported="true"
+            android:exported="false"
             android:parentActivityName=".Meal">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -51,7 +53,7 @@
 
         <activity
             android:name=".Standard"
-            android:exported="true"
+            android:exported="false"
             android:parentActivityName=".Day1">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -70,20 +72,20 @@
 
         <activity
             android:name=".RegisterActivity"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
 
         <activity android:name=".ProfileActivity"
-            android:exported="true">
+            android:exported="false">
 
         </activity>
 

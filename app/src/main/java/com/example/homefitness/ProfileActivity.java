@@ -2,6 +2,7 @@ package com.example.homefitness;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -18,7 +19,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class ProfileActivity extends AppCompatActivity implements View.OnClickListener{
+import java.util.HashMap;
+
+public class ProfileActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button reportButton;
     private Button logoutButton;
@@ -28,10 +31,9 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     private Button profileButton;
     private Button mealButton;
     private Button exerciseButton;
-
+    private String userId;
     String name, email;
-
-
+    private DatabaseReference reference;
 
 
     @Override
@@ -43,11 +45,9 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
 //        email = getString(R.string.userEmail);
 
 
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-
-        profileButton=findViewById(R.id.profile_btn);
-        mealButton=findViewById(R.id.meal_btn);
-        exerciseButton=findViewById(R.id.exercise_btn);
+        profileButton = findViewById(R.id.profile_btn);
+        mealButton = findViewById(R.id.meal_btn);
+        exerciseButton = findViewById(R.id.exercise_btn);
         profileButton.setOnClickListener(this);
         mealButton.setOnClickListener(this);
         exerciseButton.setOnClickListener(this);
@@ -55,26 +55,40 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         nameText = (TextView) findViewById(R.id.userName);
         emailText = (TextView) findViewById(R.id.userEmail);
 
-        reportButton=findViewById(R.id.report_btn);
-        logoutButton=findViewById(R.id.logout_btn);
+        reportButton = findViewById(R.id.report_btn);
+        logoutButton = findViewById(R.id.logout_btn);
         reportButton.setOnClickListener(this);
         logoutButton.setOnClickListener(this);
 
-        if (user != null) {
-            name = user.getDisplayName();
-            email = user.getEmail();
-            String uid = user.getUid();
-        }
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        userId = user.getUid();
+        reference = FirebaseDatabase.getInstance().getReference("User");
+        reference.child(userId).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                User user = snapshot.getValue(User.class);
+                if (user != null) {
 
-        nameText.setText(name);
-        emailText.setText(email);
+                    String name = user.fullName;
+                    String email = user.email;
+                    emailText.setText(email);
+                    nameText.setText(name);
+                }
 
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
     }
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.profile_btn:
                 Intent profileIntent = new Intent(ProfileActivity.this, ProfileActivity.class);
                 startActivity(profileIntent);

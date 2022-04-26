@@ -48,6 +48,21 @@
         android:layout_marginBottom="70dp"
         android:backgroundTint="#6B6B6B"/>
 
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="16dp"
+        android:text="Back"
+        android:backgroundTint="#6B6B6B"
+        app:layout_constraintTop_toBottomOf="@id/startStop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
